@@ -12,8 +12,8 @@ I've only tested these on iOS 7.0.6+, iPhone and iPad idioms.
 
 The category is in the `Categories` folder. Drag and drop:
 
-	- `UIColor+Incrementing.h`
-	- `UIColor+Incrementing.m`
+- `UIColor+Incrementing.h`
+- `UIColor+Incrementing.m`
 
 into your Xcode project. Then, just `#import` the .h file where necessary as usual.
 
