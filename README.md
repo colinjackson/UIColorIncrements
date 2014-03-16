@@ -57,8 +57,8 @@ Alpha can also be incremented alone:
 
 - `-cho_colorWithChangeToAlpha:`
 
-###Testing app
-Use the `UIStepper`s to choose the value to increment or decrement the background color. Use the submit button to call either `cho_colorWithChangeToHue:saturation:brightness:` or `cho_colorWithChangeToRed:green:blue:`, passing the displayed values as the arguments. Use the RGB/HSB button to toggle between the HSB/RGB color spaces.
+###Testing App
+Use the `UIStepper`s to choose the value by which to increment or decrement the background color's hue, saturation and brightness, or red, green, and blue values. Use the submit button to call either `cho_colorWithChangeToHue:saturation:brightness:` or `cho_colorWithChangeToRed:green:blue:`, passing the displayed values as the arguments. Use the RGB/HSB button to toggle between the RGB/HSB color spaces.
 
 
 ##Credits
