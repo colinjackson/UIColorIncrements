@@ -26,10 +26,10 @@
 
 #import "UIColor+Increments.h"
 
-@implementation UIColor (Incrementing)
+@implementation UIColor (Increments)
 
 #pragma mark - HSB instantiation methods
-- (UIColor *)cuc_colorWithChangesToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha
+- (UIColor *)cho_colorWithChangeToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha
 {
     /*
      Grayscale colors fail HSB conversion, but their RGB equivalents do not. Converting grayscale to RGB first allows for all colors to work as expected with this instance method.
@@ -51,34 +51,29 @@
     return [UIColor colorWithHue:colorHue saturation:colorSaturation brightness:colorBrightness alpha:colorAlpha];
 }
 
-- (UIColor *)cuc_colorWithChangesToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness
+- (UIColor *)cho_colorWithChangeToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness
 {
-    return [self cuc_colorWithChangesToHue:hue saturation:saturation brightness:brightness alpha:0.0f];
+    return [self cho_colorWithChangeToHue:hue saturation:saturation brightness:brightness alpha:0.0f];
 }
 
-- (UIColor *)cuc_colorWithChangesToHue:(CGFloat)hue;
+- (UIColor *)cho_colorWithChangeToHue:(CGFloat)hue;
 {
-    return [self cuc_colorWithChangesToHue:hue saturation:0.0f brightness:0.0f];
+    return [self cho_colorWithChangeToHue:hue saturation:0.0f brightness:0.0f];
 }
 
-- (UIColor *)cuc_colorWithChangesToSaturation:(CGFloat)saturation
+- (UIColor *)cho_colorWithChangeToSaturation:(CGFloat)saturation
 {
-    return [self cuc_colorWithChangesToHue:0.0f saturation:saturation brightness:0.0f];
+    return [self cho_colorWithChangeToHue:0.0f saturation:saturation brightness:0.0f];
 }
 
-- (UIColor *)cuc_colorWithChangesToBrightness:(CGFloat)brightness
+- (UIColor *)cho_colorWithChangeToBrightness:(CGFloat)brightness
 {
-    return [self cuc_colorWithChangesToHue:0.0f saturation:0.0f brightness:brightness];
-}
-
-- (UIColor *)cuc_colorWithChangesToAlpha:(CGFloat)alpha
-{
-    return [self cuc_colorWithChangesToHue:0.0f saturation:0.0f brightness:0.0f alpha:alpha];
+    return [self cho_colorWithChangeToHue:0.0f saturation:0.0f brightness:brightness];
 }
 
 
 #pragma mark - RGB instantiation methods
-- (UIColor *)cuc_colorWithChangesToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
+- (UIColor *)cho_colorWithChangeToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
 {
     CGFloat colorRed = 0.0f, colorGreen = 0.0f, colorBlue = 0.0f, colorAlpha = 0.0f;
     [self getRed:&colorRed green:&colorGreen blue:&colorBlue alpha:&colorAlpha];
@@ -91,24 +86,33 @@
     return [UIColor colorWithRed:colorRed green:colorGreen blue:colorBlue alpha:colorAlpha];
 }
 
-- (UIColor *)cuc_colorWithChangesToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
+- (UIColor *)cho_colorWithChangeToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue
 {
-    return [self cuc_colorWithChangesToRed:red green:green blue:blue alpha:0.0f];
+    return [self cho_colorWithChangeToRed:red green:green blue:blue alpha:0.0f];
 }
 
-- (UIColor *)cuc_colorWithChangesToRed:(CGFloat)red
+- (UIColor *)cho_colorWithChangeToRed:(CGFloat)red
 {
-    return [self cuc_colorWithChangesToRed:red green:0.0f blue:0.0f];
+    return [self cho_colorWithChangeToRed:red green:0.0f blue:0.0f];
 }
 
-- (UIColor *)cuc_colorWithChangesToGreen:(CGFloat)green
+- (UIColor *)cho_colorWithChangeToGreen:(CGFloat)green
 {
-    return [self cuc_colorWithChangesToRed:0.0f green:green blue:0.0f];
+    return [self cho_colorWithChangeToRed:0.0f green:green blue:0.0f];
 }
 
-- (UIColor *)cuc_colorWithChangesToBlue:(CGFloat)blue
+- (UIColor *)cho_colorWithChangeToBlue:(CGFloat)blue
 {
-    return [self cuc_colorWithChangesToRed:0.0f green:0.0f blue:blue];
+    return [self cho_colorWithChangeToRed:0.0f green:0.0f blue:blue];
+}
+
+
+#pragma mark - Alpha instantiation methods
+- (UIColor *)cho_colorWithChangeToAlpha:(CGFloat)alpha
+{
+    CGFloat newAlpha = 0.0f;
+    [self getWhite:NULL alpha:&newAlpha];
+    return [self colorWithAlphaComponent:(alpha + newAlpha)];
 }
 
 

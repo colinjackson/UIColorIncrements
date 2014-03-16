@@ -22,6 +22,9 @@
 		81782D0018D5457E00EF3F44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81782CFE18D5457E00EF3F44 /* InfoPlist.strings */; };
 		81782D0218D5457E00EF3F44 /* UIColorIncrementsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81782D0118D5457E00EF3F44 /* UIColorIncrementsTests.m */; };
 		81782D1118D545AE00EF3F44 /* UIColor+Increments.m in Sources */ = {isa = PBXBuildFile; fileRef = 81782D1018D545AE00EF3F44 /* UIColor+Increments.m */; };
+		81E69FDB18D548E500213533 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81E69FDA18D548E500213533 /* README.md */; };
+		81E69FDD18D5601600213533 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E69FDC18D5601600213533 /* QuartzCore.framework */; };
+		81E69FE018D5730B00213533 /* UIView+Borders.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E69FDF18D5730B00213533 /* UIView+Borders.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		81782D0118D5457E00EF3F44 /* UIColorIncrementsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColorIncrementsTests.m; sourceTree = "<group>"; };
 		81782D0F18D545AE00EF3F44 /* UIColor+Increments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Increments.h"; sourceTree = "<group>"; };
 		81782D1018D545AE00EF3F44 /* UIColor+Increments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Increments.m"; sourceTree = "<group>"; };
+		81E69FDA18D548E500213533 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		81E69FDC18D5601600213533 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		81E69FDE18D5730B00213533 /* UIView+Borders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Borders.h"; sourceTree = "<group>"; };
+		81E69FDF18D5730B00213533 /* UIView+Borders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Borders.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E69FDD18D5601600213533 /* QuartzCore.framework in Frameworks */,
 				81782CD918D5457D00EF3F44 /* CoreGraphics.framework in Frameworks */,
 				81782CDB18D5457D00EF3F44 /* UIKit.framework in Frameworks */,
 				81782CD718D5457D00EF3F44 /* Foundation.framework in Frameworks */,
@@ -104,6 +112,7 @@
 		81782CD518D5457D00EF3F44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81E69FDC18D5601600213533 /* QuartzCore.framework */,
 				81782CD618D5457D00EF3F44 /* Foundation.framework */,
 				81782CD818D5457D00EF3F44 /* CoreGraphics.framework */,
 				81782CDA18D5457D00EF3F44 /* UIKit.framework */,
@@ -120,6 +129,8 @@
 				81782CE818D5457D00EF3F44 /* Main.storyboard */,
 				81782CEB18D5457D00EF3F44 /* CHOViewController.h */,
 				81782CEC18D5457D00EF3F44 /* CHOViewController.m */,
+				81E69FDE18D5730B00213533 /* UIView+Borders.h */,
+				81E69FDF18D5730B00213533 /* UIView+Borders.m */,
 				81782D0E18D545AE00EF3F44 /* Categories */,
 				81782CEE18D5457D00EF3F44 /* Images.xcassets */,
 				81782CDD18D5457D00EF3F44 /* Supporting Files */,
@@ -130,6 +141,7 @@
 		81782CDD18D5457D00EF3F44 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81E69FDA18D548E500213533 /* README.md */,
 				81782CDE18D5457D00EF3F44 /* UIColorIncrements-Info.plist */,
 				81782CDF18D5457D00EF3F44 /* InfoPlist.strings */,
 				81782CE218D5457D00EF3F44 /* main.m */,
@@ -245,6 +257,7 @@
 			files = (
 				81782CEF18D5457D00EF3F44 /* Images.xcassets in Resources */,
 				81782CE118D5457D00EF3F44 /* InfoPlist.strings in Resources */,
+				81E69FDB18D548E500213533 /* README.md in Resources */,
 				81782CEA18D5457D00EF3F44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +281,7 @@
 				81782CE318D5457D00EF3F44 /* main.m in Sources */,
 				81782CE718D5457D00EF3F44 /* CHOAppDelegate.m in Sources */,
 				81782D1118D545AE00EF3F44 /* UIColor+Increments.m in Sources */,
+				81E69FE018D5730B00213533 /* UIView+Borders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +486,7 @@
 				81782D0718D5457E00EF3F44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81782D0818D5457E00EF3F44 /* Build configuration list for PBXNativeTarget "UIColorIncrementsTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +495,7 @@
 				81782D0A18D5457E00EF3F44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

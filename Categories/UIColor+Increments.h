@@ -26,19 +26,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (Incrementing)
+@interface UIColor (Increments)
 
-- (UIColor *)cuc_colorWithChangesToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
-- (UIColor *)cuc_colorWithChangesToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness;
-- (UIColor *)cuc_colorWithChangesToHue:(CGFloat)hue;
-- (UIColor *)cuc_colorWithChangesToSaturation:(CGFloat)saturation;
-- (UIColor *)cuc_colorWithChangesToBrightness:(CGFloat)brightness;
-- (UIColor *)cuc_colorWithChangesToAlpha:(CGFloat)alpha;
+//  HSB-space UIColor incrementing
+- (UIColor *)cho_colorWithChangeToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness alpha:(CGFloat)alpha;
+- (UIColor *)cho_colorWithChangeToHue:(CGFloat)hue saturation:(CGFloat)saturation brightness:(CGFloat)brightness;
+- (UIColor *)cho_colorWithChangeToHue:(CGFloat)hue;
+- (UIColor *)cho_colorWithChangeToSaturation:(CGFloat)saturation;
+- (UIColor *)cho_colorWithChangeToBrightness:(CGFloat)brightness;
 
-- (UIColor *)cuc_colorWithChangesToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
-- (UIColor *)cuc_colorWithChangesToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
-- (UIColor *)cuc_colorWithChangesToRed:(CGFloat)red;
-- (UIColor *)cuc_colorWithChangesToGreen:(CGFloat)green;
-- (UIColor *)cuc_colorWithChangesToBlue:(CGFloat)blue;
+//  RGB-space UIColor incrementing
+- (UIColor *)cho_colorWithChangeToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (UIColor *)cho_colorWithChangeToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
+- (UIColor *)cho_colorWithChangeToRed:(CGFloat)red;
+- (UIColor *)cho_colorWithChangeToGreen:(CGFloat)green;
+- (UIColor *)cho_colorWithChangeToBlue:(CGFloat)blue;
+
+//  Alpha incrementing
+//      Instantiating new colors
+- (UIColor *)cho_colorWithChangeToAlpha:(CGFloat)alpha;
 
 @end
